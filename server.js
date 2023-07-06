@@ -17,6 +17,10 @@ app.use(express.json({ limit: '50mb' }))
 app.use(express.urlencoded({ extended: true }))
 app.use(router)
 
+app.get('/', (req, res) => {
+    return res.json({ message: 'App running successfully' })
+})
+
 app.listen(process.env.SERVER_PORT || 3000, async () => {
     await connectToDatabase()
     await sequelize.sync({ alter: true })
