@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(router)
 
 app.get('/', (req, res) => {
-    return res.json({ message: 'App running successfully' })
+    return res.send('App running successfully !')
 })
 
 app.listen(process.env.SERVER_PORT || 3000, async () => {
