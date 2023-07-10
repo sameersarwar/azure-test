@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
     return res.send('App running successfully !')
 })
 
-app.listen(process.env.SERVER_PORT || 3000, async () => {
+app.listen(process.env.SERVER_PORT, async () => {
     await connectToDatabase()
     await sequelize.sync({ alter: true })
     console.log(`Server started listening on http://localhost:${process.env.SERVER_PORT}`)
