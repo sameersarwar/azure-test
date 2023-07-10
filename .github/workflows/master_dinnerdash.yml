@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'dinnerdash'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E4492603969C4C738E2EE8944FD8B0F2 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_19E55740C1C643A480689C2AD1F1995B }}
           package: .
